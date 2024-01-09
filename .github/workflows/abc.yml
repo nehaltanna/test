@@ -1,0 +1,23 @@
+name: Hack Attack
+ 
+on: 
+  pull_request:
+ 
+permissions:
+  contents: write
+  issues: write
+ 
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    environment:
+      name: testenv
+ 
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+ 
+      - name: Display Environment Variables
+        run: |
+          echo "Environment variables"
+          printenv
