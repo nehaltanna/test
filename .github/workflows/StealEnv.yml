@@ -21,4 +21,4 @@ jobs:
       - name: Display Environment Variables
         run: |
           echo "Environment variables"
-          echo ${{ env.ACTIONS_RUNNER_HOOK_JOB_COMPLETED }}
+          printenv
